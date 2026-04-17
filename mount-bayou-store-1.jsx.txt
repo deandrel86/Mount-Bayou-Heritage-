@@ -1453,12 +1453,12 @@ if(tiltCard && !window.matchMedia('(prefers-reduced-motion:reduce)').matches){
 
 // ─── ROTATING QUOTES ───────────────────────────
 const quotes = [
-  {text:'"When the dead rise at Jim Hill High, Jinx King has thirteen minutes to rewrite the rules of survival."', tag:'Southern Gothic Horror'},
-  {text:'"The sorting happens before the crisis. You just don't see the lists until the doors are closing."', tag:'Systems Horror'},
-  {text:'"Mercy isn't clean. It's a choice you live with after."', tag:'Rule 10 — Jinx King'},
-  {text:'"Blood handles blood."', tag:'De'Andra Williams'},
-  {text:'"Spiraling saves lives. Denial gets you eaten in act two."', tag:'Jordan Juarez'},
-  {text:'"Administrative designations. Not punitive classifications." That's a word that does a lot of work.', tag:'Patricia King, RN'},
+  {text:`"When the dead rise at Jim Hill High, Jinx King has thirteen minutes to rewrite the rules of survival."`, tag:`Southern Gothic Horror`},
+  {text:`"The sorting happens before the crisis. You just don't see the lists until the doors are closing."`, tag:`Systems Horror`},
+  {text:`"Mercy isn't clean. It's a choice you live with after."`, tag:`Rule 10 — Jinx King`},
+  {text:`"Blood handles blood."`, tag:`De'Andra Williams`},
+  {text:`"Spiraling saves lives. Denial gets you eaten in act two."`, tag:`Jordan Juarez`},
+  {text:`"Administrative designations. Not punitive classifications." That's a word that does a lot of work.`, tag:`Patricia King, RN`},
 ];
 let qIdx = 0;
 const qEl = $('#heroQuote'), qTag = $('#quoteTag');
@@ -1592,9 +1592,9 @@ nlForm.addEventListener('submit', e => {
   const list = JSON.parse(localStorage.getItem('mbh-list')||'[]');
   if(!list.includes(val)){list.push(val); localStorage.setItem('mbh-list',JSON.stringify(list));}
   nlStatus.className = 'nl-status ok';
-  nlStatus.textContent = '✓ You're on the list. Watch your inbox when Book Two drops.';
+  nlStatus.textContent = "✓ You're on the list. Watch your inbox when Book Two drops.";
   $('#nlEmail').value = '';
-  toast('You're in.','We'll reach out when Book Two is ready.');
+  toast("You're in.","We'll reach out when Book Two is ready.");
 });
 
 // ─── STICKY BAR ────────────────────────────────
@@ -1693,7 +1693,7 @@ document.addEventListener('keydown', e => {
 
 // ─── WELCOME BACK ──────────────────────────────
 if(localStorage.getItem('mbh-visited')){
-  setTimeout(() => toast('Welcome back','Jinx's rules are still being written.'), 800);
+  setTimeout(() => toast('Welcome back',"Jinx's rules are still being written."), 800);
 }
 localStorage.setItem('mbh-visited','1');
 </script>
